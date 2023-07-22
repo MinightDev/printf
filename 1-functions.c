@@ -11,22 +11,29 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * print_string - Prints a string to the standard output (stdout)
+ * print_string - Prints a string.
  * @str: The string to be printed
  *
- * Return: The number of characters printed (excluding the null byte)
+ * Return: The number of characters printed
  */
 int print_string(const char *str)
 {
 	int i = 0;
 
 	if (str == NULL)
-		return (print_string("(null)"));
-
-	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		str = "(null)";
+		for (i = 0; str[i]; i++)
+			_putchar(str[i]);
+	}
+	else if (*str == '\0')
+	{
+		return (-1);
+	}
+	else
+	{
+		for (i = 0; str[i]; i++)
+			_putchar(str[i]);
 	}
 
 	return (i);
@@ -40,7 +47,8 @@ int print_string(const char *str)
 int print_int(int num)
 {
 	int i = 0;
-	int j = 1;
+	unsigned int abs_num;
+	unsigned int j = 1;
 	int negative = 0;
 
 	if (num == 0)
@@ -50,19 +58,31 @@ int print_int(int num)
 	}
 	if (num < 0)
 	{
-		_putchar('-');
-		i++;
-		num = -num;
+		if (num == INT_MIN)
+		{
+			_putchar('-');
+			i++;
+			abs_num = (unsigned int)(-(num + 1)) + 1;
+		} else
+		{
+			_putchar('-');
+			i++;
+			abs_num = (unsigned int)(-num);
+		}
 		negative = 1;
 	}
-	while (num / j >= 10)
+	else
+	{
+		abs_num = (unsigned int)num;
+	}
+	while (abs_num / j >= 10)
 		j *= 10;
 
 	while (j > 0)
 	{
-		_putchar(num / j + '0');
+		_putchar(abs_num / j + '0');
 		i++;
-		num %= j;
+		abs_num %= j;
 		j /= 10;
 	}
 	return (i + negative);
