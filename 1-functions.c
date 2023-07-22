@@ -21,21 +21,13 @@ int print_string(const char *str)
 	int i = 0;
 
 	if (str == NULL)
-	{
-		str = "(null)";
-		for (i = 0; str[i]; i++)
-			_putchar(str[i]);
-	}
-	else if (*str == '\0')
-	{
-		return (-1);
-	}
-	else
-	{
-		for (i = 0; str[i]; i++)
-			_putchar(str[i]);
-	}
+		return (print_string("(null)"));
 
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
+	}
 	return (i);
 }
 /**
