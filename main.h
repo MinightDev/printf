@@ -25,4 +25,4 @@ int handle_specifiers_2(const char *format, va_list args);
 int handle_formats(const char *format, va_list args);
 int _printf(const char *format, ...);
 
-#endif 
+#endif
