@@ -54,39 +54,40 @@ int print_string(const char *str)
  */
 int print_int(int num)
 {
-	int buffer[12];
 	int i = 0;
-	int negative = 0;
+	int divi = 1;
+	int minus = 0;
 
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-
 	if (num == INT_MIN)
 	{
 		_putchar('-');
-		_putchar('2');
-		num %= 1000000000;
-		num = -num;
-		i += 2;
+		i++;
+		num = -(num + 1);
+		minus = 1;
 	}
 	if (num < 0)
 	{
 		_putchar('-');
+		i++;
 		num = -num;
-		negative = 1;
+		minus = 1;
 	}
-	do {
-		buffer[i++] = num % 10 + '0';
-		num /= 10;
-	} while (num != 0);
+	while (num / divi >= 10)
+		divi *= 10;
 
-	while (i > 0)
-		_putchar(buffer[--i]);
-
-	return (i + negative);
+	while (divi != 0)
+	{
+		_putchar(num / divi + '0');
+		i++;
+		num %= divi;
+		divi /= 10;
+	}
+	return (i + minus);
 }
 /**
  * print_buffer - Writes a buffer to the standard output (stdout)
