@@ -5,8 +5,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
-
 
 int _putchar(char c);
 int print_string(const char *str);
