@@ -5,8 +5,12 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
+
+#define BUFFER_SIZE 1024
 
 int _putchar(char c);
+int print_buffer(char *buffer, int len);
 int print_string(const char *str);
 int print_int(int num);
 int print_unsigned_int(unsigned int num);

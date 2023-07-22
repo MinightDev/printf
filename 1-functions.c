@@ -8,9 +8,23 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
-}
+	static char buffer[BUFFER_SIZE];
+	static int i;
+	int j = 0;
 
+	if (c == '\n' || i >= BUFFER_SIZE - 1)
+	{
+		buffer[i] = c;
+		j = print_buffer(buffer, i + 1);
+		i = 0;
+	}
+	else
+	{
+		buffer[i++] = c;
+	}
+
+	return (j);
+}
 /**
  * print_string - Prints a string to the standard output (stdout)
  * @str: The string to be printed
@@ -32,7 +46,6 @@ int print_string(const char *str)
 
 	return (i);
 }
-
 /**
  * print_int - Prints an integer to the standard output (stdout)
  * @num: The integer to be printed
@@ -41,9 +54,9 @@ int print_string(const char *str)
  */
 int print_int(int num)
 {
+	int buffer[12];
 	int i = 0;
-	int div = 1;
-	int is_negative = 0;
+	int negative = 0;
 
 	if (num == 0)
 	{
@@ -51,24 +64,56 @@ int print_int(int num)
 		return (1);
 	}
 
+	if (num == INT_MIN)
+	{
+		_putchar('-');
+		_putchar('2');
+		num %= 1000000000;
+		num = -num;
+		i += 2;
+	}
 	if (num < 0)
 	{
 		_putchar('-');
-		i++;
 		num = -num;
-		is_negative = 1;
+		negative = 1;
 	}
+	do {
+		buffer[i++] = num % 10 + '0';
+		num /= 10;
+	} while (num != 0);
 
-	while (num / div >= 10)
-		div *= 10;
+	while (i > 0)
+		_putchar(buffer[--i]);
 
-	while (div != 0)
+	return (i + negative);
+}
+/**
+ * print_buffer - Writes a buffer to the standard output (stdout)
+ * @buffer: The buffer containing the data to be written
+ * @len: The length of the data in the buffer
+ *
+ * Return: The number of characters written
+ */
+int print_buffer(char *buffer, int len)
+{
+	int i = 0;
+
+	/* Write data in chunks of BUFFER_SIZE */
+	while (len > 0)
 	{
-		_putchar(num / div + '0');
-		i++;
-		num %= div;
-		div /= 10;
-	}
+		int size;
 
-	return (i + is_negative);
+		if (len > BUFFER_SIZE)
+		{
+			size = BUFFER_SIZE;
+		} else
+		{
+			size = len;
+		}
+		i += write(1, buffer, size);
+		buffer = buffer + size;
+		len = len - size;
+	}
+	return (i);
 }

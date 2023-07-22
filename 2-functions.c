@@ -98,6 +98,11 @@ int print_addr(void *ptr)
 	int i = 0, j;
 	char arr_hex[16];
 
+	if (ptr == NULL)
+	{
+		return (print_string("(nil)"));
+	}
+
 	_putchar('0');
 	_putchar('x');
 
