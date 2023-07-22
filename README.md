@@ -1,71 +1,76 @@
-**README.md**
+# Custom printf Implementation
 
-# ALX _printf Function
+This is a custom implementation of the `printf` function in C, called `_printf`, which provides basic formatting capabilities. The project consists of several files:
 
-![Contributor: minightdev](https://img.shields.io/badge/contributor-minightdev-blue)
-![Contributor: soufianeaziz](https://img.shields.io/badge/contributor-soufianeaziz-blue)
+- **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
 
-This project contains a custom implementation of the `_printf` function, which mimics the behavior of the standard `printf` function in C. The goal of this project is to provide a simplified version of `printf` that supports `%s`, `%c`, `%d`, `%i`, and `%%` conversion specifiers.
+- **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
+
+- **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
+
+- **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
+
+- **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
+
+- **_printf.c**: The main implementation file contains the custom `_printf` function, which emulates the behavior of the standard `printf` function with limited format specifiers.
 
 ## Requirements
 
-- Allowed editors: vi, vim, emacs
-- All files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-- All files should end with a new line
-- A `README.md` file, at the root of the folder of the project is mandatory
-- Your code should use the Betty style. It will be checked using `betty-style.pl` and `betty-doc.pl`
-- You are not allowed to use global variables
-- No more than 5 functions per file
-- The prototypes of all your functions should be included in your header file called `main.h`
-- Don’t forget to push your header file
-- All your header files should be include guarded
-- Note that we will not provide the `_putchar` function for this project
+The project adheres to the following requirements:
+
+- **Editor**: You can use vi, vim, emacs as editors for writing the code.
+
+- **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
+
+- **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
+
+- **New Line**: All files end with a new line.
+
+- **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
+
+- **Header File**: All function prototypes are declared in `main.h`.
+
+- **Header Guards**: Header files have include guards to prevent multiple inclusion.
+
+- **Global Variables**: The code does not use global variables.
+
+- **Function Limit**: Each file contains no more than 5 functions for better code organization.
+
+- **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
+
+## Usage
+
+To use the custom `_printf` function, follow these steps:
+
+1. Include the `main.h` header in your source file.
+
+2. Call the `_printf` function, passing the format string and any required arguments.
+
+3. The function will output the formatted string to the standard output.
+
+Note that the custom `_printf` function supports some basic format specifiers such as `%c`, `%s`, `%d`, `%i`, `%u`, `%o`, `%x`, `%X`, `%p`, and `%%`, as well as some additional custom specifiers like `%b`, `%S`, `%r`, and `%R`.
+
+Remember that the provided `main.c` file serves as an example for testing purposes, but you don't have to push it to your repository. The project will be compiled with a different `main.c` file during evaluation.
 
 ## Compilation
 
 To compile the project, use the following command:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.h *.c -o printf.exe
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.h *.c -o custom_printf
 ```
 
-## Usage
+## Testing
 
-You can use the `_printf` function in your code by including the `main.h` header file. The function follows the same format as the standard `printf` function and supports `%s`, `%c`, `%d`, `%i`, and `%%` conversion specifiers.
+You can test the custom `_printf` function by running the compiled executable:
 
-**Example:**
-
-```c
-#include <stdio.h>
-#include "main.h"
-
-int main(void)
-{
-    int n = 4;
-
-	_printf("%s\n", "Hello world");
-	
-    _printf("%c\n", 'S');
-	
-	_printf("%d\n", n);
-	
-    _printf("%d\n", -n);
-	
-	_printf("%i\n", -n);
-
-    return 0;
-}
+```bash
+./custom_printf
 ```
 
-## Note
+The test cases in the provided `main.c` file will be executed, and the output will be displayed on the console.
 
-This implementation is a basic version of `printf` and does not handle all the features of the standard `printf` function. It aims to provide a simple demonstration of how the function can be implemented to handle specific conversion specifiers.
+## Collaborators
 
-## Contributors
-
-- minightdev ([GitHub](https://github.com/minightdev))
-- soufianeaziz ([GitHub](https://github.com/soufianeaziz))
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [MinightDev](https://github.com/MinightDev)
+- [SoufianeAziz](https://github.com/SoufianeAziz)
