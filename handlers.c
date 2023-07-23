@@ -40,7 +40,6 @@ int handle_custom_specifiers(const char *format, va_list args)
 		_putchar(format[i]);
 		i++;
 	}
-
 	return (i);
 }
 /**
@@ -73,14 +72,12 @@ int handle_specifiers_2(const char *format, va_list args)
 
 		i += print_hexa(num, upper);
 	}
-
 	else
 	{
 		_putchar('%');
 		_putchar(format[i]);
 		i++;
 	}
-
 	return (i);
 }
 /**
@@ -152,7 +149,9 @@ int handle_formats(const char *format, va_list args)
 		{
 			i++;
 			if (format[i] == '\0')
-				break;
+				return (-1);
+			if (format[i] == ' ')
+				return (-1);
 
 			if (format[i] == 'b' || format[i] == 'S' ||
 					format[i] == 'r' || format[i] == 'R')
@@ -177,6 +176,5 @@ int handle_formats(const char *format, va_list args)
 			i++;
 		}
 	}
-
 	return (count);
 }
