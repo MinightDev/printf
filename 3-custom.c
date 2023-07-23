@@ -42,7 +42,7 @@ int print_S(const char *str)
 	int i = 0;
 
 	if (str == NULL)
-		return (print_S("(null)"));
+		return (print_string("(null)"));
 
 	while (str[i])
 	{
@@ -54,9 +54,8 @@ int print_S(const char *str)
 		{
 			_putchar('\\');
 			_putchar('x');
-			if (str[i] < 16)
-				_putchar('0');
-			_printf("%X", str[i]);
+			_putchar("0123456789ABCDEF"[str[i] / 16]);
+			_putchar("0123456789ABCDEF"[str[i] % 16]);
 		}
 		i++;
 	}
