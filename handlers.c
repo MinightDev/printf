@@ -148,9 +148,7 @@ int handle_formats(const char *format, va_list args)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
-				return (-1);
-			if (format[i] == ' ')
+			if (format[i] == '\0' || format[i] == ' ')
 				return (-1);
 
 			if (format[i] == 'b' || format[i] == 'S' ||
@@ -167,6 +165,7 @@ int handle_formats(const char *format, va_list args)
 			{
 				count += handle_specifiers(&format[i], args);
 			}
+
 			i++;
 		}
 		else
