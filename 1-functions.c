@@ -21,12 +21,22 @@ int print_string(const char *str)
 	int i = 0;
 
 	if (str == NULL)
-		return (print_string("(null)"));
-
-	while (str[i])
 	{
-		_putchar(str[i]);
-		i++;
+		const char *null = "(null)";
+
+		while (null[i])
+		{
+			_putchar(null[i]);
+			i++;
+		}
+	}
+	else
+	{
+		while (str[i])
+		{
+			_putchar(str[i]);
+			i++;
+		}
 	}
 	return (i);
 }
