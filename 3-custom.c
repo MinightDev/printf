@@ -54,8 +54,8 @@ int print_S(const char *str)
 		{
 			_putchar('\\');
 			_putchar('x');
-			_putchar("0123456789ABCDEF"[str[i] / 16]);
-			_putchar("0123456789ABCDEF"[str[i] % 16]);
+			_putchar("0123456789ABCDEF"[(unsigned char)str[i] / 16]);
+			_putchar("0123456789ABCDEF"[(unsigned char)str[i] % 16]);
 		}
 		i++;
 	}
