@@ -20,7 +20,7 @@ The project adheres to the following requirements:
 
 - 1/ **Editor**: You can use vi, vim, emacs as editors for writing the code.
 
-- **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
+- 2/ **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
 
 - **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
 
