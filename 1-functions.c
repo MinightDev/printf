@@ -41,35 +41,28 @@ int print_int(int num)
 	int i = 0;
 	unsigned int abs_num;
 	unsigned int j = 1;
-	int negative = 0;
 
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-	if (num < 0)
+	if (num == INT_MIN)
 	{
-		if (num == INT_MIN)
-		{
-			_putchar('-');
-			i++;
-			abs_num = (unsigned int)(-(num + 1)) + 1;
-		} else
-		{
-			_putchar('-');
-			i++;
-			abs_num = (unsigned int)(-num);
-		}
-		negative = 1;
-	}
-	else
+		_putchar('-');
+		i++;
+		abs_num = (unsigned int)(-(INT_MIN + 1)) + 1;
+	} else if (num < 0)
+	{
+		_putchar('-');
+		abs_num = (unsigned int)(-num);
+		i++;
+	} else
 	{
 		abs_num = (unsigned int)num;
 	}
 	while (abs_num / j >= 10)
 		j *= 10;
-
 	while (j > 0)
 	{
 		_putchar(abs_num / j + '0');
@@ -77,5 +70,5 @@ int print_int(int num)
 		abs_num %= j;
 		j /= 10;
 	}
-	return (i + negative);
+	return (i);
 }
