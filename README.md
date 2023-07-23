@@ -8,7 +8,7 @@ This is a custom implementation of the `printf` function in C, called `_printf`,
 
 - 3/ **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
 
-- **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
+- 4/ **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
 
 - **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
 
