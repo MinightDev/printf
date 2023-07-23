@@ -42,13 +42,14 @@ int print_S(const char *str)
 	int i = 0;
 
 	if (str == NULL)
-		return (print_S("(null)"));
+		return (print_string("(null)"));
 
 	while (str[i])
 	{
 		if (str[i] >= 32 && str[i] < 127)
 		{
 			_putchar(str[i]);
+			i++;
 		}
 		else
 		{
@@ -57,10 +58,9 @@ int print_S(const char *str)
 			if (str[i] < 16)
 				_putchar('0');
 			_printf("%X", str[i]);
+			i++;
 		}
-		i++;
 	}
-
 	return (i);
 }
 /**
