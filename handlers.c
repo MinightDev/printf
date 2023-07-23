@@ -84,7 +84,6 @@ int handle_specifiers_2(const char *format, va_list args)
  * handle_specifiers - Handles conversion specifiers in the format string
  * @format: The format string
  * @args: The variable arguments list
- *
  * Return: The number of characters processed from the format string
  */
 int handle_specifiers(const char *format, va_list args)
@@ -137,13 +136,10 @@ int handle_specifiers(const char *format, va_list args)
  */
 int handle_formats(const char *format, va_list args)
 {
-	int i = 0;
-	int count = 0;
+	int count = 0, i = 0;
 
-	while (format[i])
+	for (; format[i]; i++)
 	{
-		if (format[i] == '\0')
-			break;
 		if (format[i] == '%')
 		{
 			i++;
@@ -153,7 +149,7 @@ int handle_formats(const char *format, va_list args)
 			{
 				_putchar('%');
 				_putchar(' ');
-				i++;
+				count += 2;
 				continue;
 			}
 			if (format[i] == 'b' || format[i] == 'S' ||
@@ -170,14 +166,11 @@ int handle_formats(const char *format, va_list args)
 			{
 				count += handle_specifiers(&format[i], args);
 			}
-
-			i++;
 		}
 		else
 		{
 			_putchar(format[i]);
 			count++;
-			i++;
 		}
 	}
 	return (count);
