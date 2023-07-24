@@ -32,7 +32,7 @@ int print_string(const char *str)
 	}
 	else
 	{
-		while (str[i] != '\0')
+		while (str[i])
 		{
 			_putchar(str[i]);
 			i++;
