@@ -42,8 +42,9 @@ int print_S(const char *str)
 	int i = 0, count = 0;
 
 	if (str == NULL)
-		return print_S("(null)");
-
+	{
+		return (print_S("(null)"));
+	}
 	while (str[i])
 	{
 		if (str[i] >= 32 && str[i] < 127)
