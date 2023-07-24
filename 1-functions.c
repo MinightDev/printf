@@ -20,10 +20,23 @@ int print_string(const char *str)
 {
 	int i = 0;
 
-	while (str[i])
+	if (str == NULL)
 	{
-		_putchar(str[i]);
-		i++;
+		const char *null = "(null)";
+
+		while (null[i] != '\0')
+		{
+			_putchar(null[i]);
+			i++;
+		}
+	}
+	else
+	{
+		while (str[i] != '\0')
+		{
+			_putchar(str[i]);
+			i++;
+		}
 	}
 	return (i);
 }
