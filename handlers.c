@@ -101,10 +101,7 @@ int handle_specifiers(const char *format, va_list args)
 	{
 		const char *str = va_arg(args, const char *)
 
-			if (str == NULL)
-				i += print_string("(null)");
-			else
-				i += print_string(str);
+			i += print_string(str);
 	}
 	else if (format[i] == 'd' || format[i] == 'i')
 	{
