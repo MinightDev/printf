@@ -22,13 +22,7 @@ int print_string(const char *str)
 
 	if (str == NULL)
 	{
-		const char *null = "(null)";
-
-		while (null[i] != '\0')
-		{
-			_putchar(null[i]);
-			i++;
-		}
+		return (print_string("(null)"));
 	}
 	else
 	{
