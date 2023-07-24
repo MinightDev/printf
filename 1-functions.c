@@ -18,18 +18,24 @@ int _putchar(char c)
  */
 int print_string(const char *str)
 {
-	int i;
+	int i = 0;
 
 	if (str == NULL)
 	{
-		str = "(null)";
+		const char *null = "(null)";
 
+		while (null[i] != '\0')
+		{
+			_putchar(null[i]);
+			i++;
+		}
 	}
 	else
 	{
-		for (i = 0; str[i] != '\0'; i++)
+		while (str[i] != '\0')
 		{
 			_putchar(str[i]);
+			i++;
 		}
 	}
 	return (i);
