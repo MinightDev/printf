@@ -39,28 +39,33 @@ int print_binary(unsigned int num)
  */
 int print_S(const char *str)
 {
-	int i = 0;
+	int i = 0, count = 0;
 
 	if (str == NULL)
-		return (print_string("(null)"));
+		return print_S("(null)");
 
 	while (str[i])
 	{
 		if (str[i] >= 32 && str[i] < 127)
 		{
 			_putchar(str[i]);
+			count++;
 		}
 		else
 		{
 			_putchar('\\');
 			_putchar('x');
-			_putchar("0123456789ABCDEF"[(unsigned char)str[i] / 16]);
-			_putchar("0123456789ABCDEF"[(unsigned char)str[i] % 16]);
+			if (str[i] < 16)
+				_putchar('0');
+			count += 3;
+			count += print_hexa(str[i], 1);
 		}
 		i++;
 	}
-	return (i);
+
+	return (count);
 }
+
 /**
  * reversed - Prints a reversed string to the standard output.
  * @str: The string to be printed in reverse.
