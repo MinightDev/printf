@@ -18,29 +18,14 @@ int _putchar(char c)
  */
 int print_string(const char *str)
 {
-	int count = 0;
+	int i = 0;
 
-	if (str == NULL)
+	while (str[i])
 	{
-		const char *null = "(null)";
-		while (*null)
-		{
-			_putchar(*null);
-			null++;
-			count++;
-		}
+		_putchar(str[i]);
+		i++;
 	}
-	else
-	{
-		while (*str)
-		{
-			_putchar(*str);
-			str++;
-			count++;
-		}
-	}
-
-	return (count);
+	return (i);
 }
 /**
  * print_int - Prints an integer to the standard output (stdout)
