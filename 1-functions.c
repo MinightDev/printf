@@ -16,27 +16,26 @@ int _putchar(char c)
  *
  * Return: The number of characters printed
  */
-int print_string(const char *str)
+int print_string(const char* s)
 {
 	int i = 0;
 
-	if (str == NULL)
+	if (s == NULL)
 	{
-		const char *null = "(null)";
+		const char* null = "(null)";
 
-		while (null[i] != '\0')
+		while (*null)
 		{
-			_putchar(null[i]);
-			i++;
+			_putchar(*null);
+			null++;
 		}
+		return (6);
 	}
-	else
+
+	while (*s != '\0')
 	{
-		while (str[i] != '\0')
-		{
-			_putchar(str[i]);
-			i++;
-		}
+		s++;
+		i++;
 	}
 	return (i);
 }
