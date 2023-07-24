@@ -144,7 +144,7 @@ int handle_formats(const char *format, va_list args)
 		{
 			i++;
 			if (format[i] == '\0')
-				return (-1);
+				break;
 			if (format[i] == ' ')
 			{
 				_putchar('%');
