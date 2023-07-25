@@ -10,7 +10,7 @@ This is a custom implementation of the `printf` function in C, called `_printf`,
 
 - / **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
 
-- 5/ **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
+- / **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
 
 - 6/ **_printf.c**: The main implementation file contains the custom `_printf` function, which emulates the behavior of the standard `printf` function with limited format specifiers.
 
