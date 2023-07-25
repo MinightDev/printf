@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 #include <limits.h>
 /**
  * main - Entery point.
@@ -44,8 +44,5 @@ int main(void)
 	_printf("Rot13: [%R]\n", "Uryyb jbeyq");
 	len = _printf("Percent:[%% ]\n");
 	len2 = printf("Percent:[%% ]\n");
-	_printf("Char: [% ]\n");
-	_printf("Char: [% ]\n");
-	_printf("%");
 	return (0);
 }
