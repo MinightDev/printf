@@ -145,14 +145,6 @@ int handle_formats(const char *format, va_list args)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-			if (format[i] == ' ')
-			{
-				putchar('%');
-				putchar(' ');
-				count += 2;
-				continue;
-				return (-1);
-			}
 			if (format[i] == 'b' || format[i] == 'S' ||
 					format[i] == 'r' || format[i] == 'R')
 			{
