@@ -26,7 +26,7 @@ The project adheres to the following requirements:
 
 - / **New Line**: All files end with a new line.
 
-- 5/ **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
+- / **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
 
 - 6/ **Header File**: All function prototypes are declared in `main.h`.
 
