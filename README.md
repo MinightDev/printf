@@ -28,7 +28,7 @@ The project adheres to the following requirements:
 
 - / **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
 
-- 6/ **Header File**: All function prototypes are declared in `main.h`.
+- / **Header File**: All function prototypes are declared in `main.h`.
 
 - 7/ **Header Guards**: Header files have include guards to prevent multiple inclusion.
 
