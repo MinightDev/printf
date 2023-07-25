@@ -34,7 +34,7 @@ The project adheres to the following requirements:
 
 - / **Global Variables**: The code does not use global variables.
 
-- 9/ **Function Limit**: Each file contains no more than 5 functions for better code organization.
+- / **Function Limit**: Each file contains no more than 5 functions for better code organization.
 
 - 10/ **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
 
