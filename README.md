@@ -30,7 +30,7 @@ The project adheres to the following requirements:
 
 - / **Header File**: All function prototypes are declared in `main.h`.
 
-- 7/ **Header Guards**: Header files have include guards to prevent multiple inclusion.
+- / **Header Guards**: Header files have include guards to prevent multiple inclusion.
 
 - 8/ **Global Variables**: The code does not use global variables.
 
