@@ -65,8 +65,3 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.h *.c -o custom_printf
 You can test the custom `_printf` function by running the compiled executable:
 
 ```bash
-./custom_printf
-```
-
-The test cases in the provided `main.c` file will be executed, and the output will be displayed on the console.
-
