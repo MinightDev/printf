@@ -70,5 +70,3 @@ You can test the custom `_printf` function by running the compiled executable:
 
 The test cases in the provided `main.c` file will be executed, and the output will be displayed on the console.
 
-## Collaborators
-
