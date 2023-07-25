@@ -59,5 +59,3 @@ To compile the project, use the following command:
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.h *.c -o custom_printf
 ```
-
-## Testing
