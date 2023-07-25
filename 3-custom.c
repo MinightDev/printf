@@ -68,7 +68,7 @@ int print_S(const char *str)
 }
 
 /**
- * reversed - Prints a reversed string to the standard output.
+ * reversed - Prints a reversed string.
  * @str: The string to be printed in reverse.
  *
  * Return: The number of characters printed.
@@ -86,7 +86,7 @@ int reversed(const char *str)
 	return (j);
 }
 /**
- * _rot13 - Prints a ROT13-encrypted string to the standard output.
+ * _rot13 - Prints a ROT13-encrypted string.
  * @str: The string to be printed.
  *
  * Return: The number of characters printed.

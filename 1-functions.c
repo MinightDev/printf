@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _putchar - Writes a character to the standard output (stdout)
+ * _putchar - Writes a character
  * @c: The character to be written
  *
  * Return: On success, 1. On error, -1 is returned, and errno is set
@@ -35,7 +35,7 @@ int print_string(const char *str)
 	return (i);
 }
 /**
- * print_int - Prints an integer to the standard output (stdout)
+ * print_int - Prints an integer
  * @num: The integer to be printed
  *
  * Return: The number of characters printed
