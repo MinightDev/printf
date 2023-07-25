@@ -4,7 +4,7 @@ This is a custom implementation of the `printf` function in C, called `_printf`,
 
 - / **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
 
-- 2/ **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
+- / **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
 
 - 3/ **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
 
