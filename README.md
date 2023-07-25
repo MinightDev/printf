@@ -36,7 +36,7 @@ The project adheres to the following requirements:
 
 - / **Function Limit**: Each file contains no more than 5 functions for better code organization.
 
-- / **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
+- **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
 
 ## Usage
 
