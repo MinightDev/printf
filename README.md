@@ -18,11 +18,11 @@ This is a custom implementation of the `printf` function in C, called `_printf`,
 
 The project adheres to the following requirements:
 
-- / **Editor**: You can use vi, vim, emacs as editors for writing the code.
+- **Editor**: You can use vi, vim, emacs as editors for writing the code.
 
-- / **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
+- **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
 
-- / **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
+- **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
 
 - **New Line**: All files end with a new line.
 
