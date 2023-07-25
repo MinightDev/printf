@@ -2,41 +2,41 @@
 
 This is a custom implementation of the `printf` function in C, called `_printf`, which provides basic formatting capabilities. The project consists of several files:
 
-- 1/ **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
+- / **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
 
-- 2/ **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
+- / **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
 
-- 3/ **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
+- / **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
 
-- 4/ **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
+- / **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
 
-- 5/ **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
+- / **main.h**: The header file contains the function prototypes used in the implementation. It is included by other files to access function declarations.
 
-- 6/ **_printf.c**: The main implementation file contains the custom `_printf` function, which emulates the behavior of the standard `printf` function with limited format specifiers.
+- / **_printf.c**: The main implementation file contains the custom `_printf` function, which emulates the behavior of the standard `printf` function with limited format specifiers.
 
 ## Requirements
 
 The project adheres to the following requirements:
 
-- 1/ **Editor**: You can use vi, vim, emacs as editors for writing the code.
+- **Editor**: You can use vi, vim, emacs as editors for writing the code.
 
-- 2/ **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
+- **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
 
-- 3/ **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
+- **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
 
-- 4/ **New Line**: All files end with a new line.
+- **New Line**: All files end with a new line.
 
-- 5/ **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
+- **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
 
-- 6/ **Header File**: All function prototypes are declared in `main.h`.
+- **Header File**: All function prototypes are declared in `main.h`.
 
-- 7/ **Header Guards**: Header files have include guards to prevent multiple inclusion.
+- **Header Guards**: Header files have include guards to prevent multiple inclusion.
 
-- 8/ **Global Variables**: The code does not use global variables.
+- **Global Variables**: The code does not use global variables.
 
-- 9/ **Function Limit**: Each file contains no more than 5 functions for better code organization.
+- **Function Limit**: Each file contains no more than 5 functions for better code organization.
 
-- 10/ **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
+- **Collaborators**: The collaborators MinightDev and SoufianeAziz are added to the project.
 
 ## Usage
 
