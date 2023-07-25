@@ -150,6 +150,7 @@ int handle_formats(const char *format, va_list args)
 				_putchar('%');
 				_putchar(' ');
 				count += 2;
+				i++;
 				continue;
 			}
 			if (format[i] == 'b' || format[i] == 'S' ||
