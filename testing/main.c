@@ -42,6 +42,10 @@ int main(void)
 	_printf("Reversed: [%r]\n", "Hello");
 	_printf("Rot13: [%R]\n", "Hello world");
 	_printf("Rot13: [%R]\n", "Uryyb jbeyq");
-
+	len = _printf("Percent:[%% ]\n");
+	len2 = printf("Percent:[%% ]\n");
+	_printf("Char: [% ]\n");
+	_printf("Char: [% ]\n");
+	_printf("%");
 	return (0);
 }
