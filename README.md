@@ -72,4 +72,3 @@ The test cases in the provided `main.c` file will be executed, and the output wi
 
 ## Collaborators
 
-- [MinightDev](https://github.com/MinightDev)
