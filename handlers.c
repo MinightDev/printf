@@ -136,41 +136,37 @@ int handle_specifiers(const char *format, va_list args)
  */
 int handle_formats(const char *format, va_list args)
 {
-	int count = 0, i = 0;
+	int count = 0;
 
-	for (; format[i]; i++)
+	for (; *format; format++)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			i++;
-			if (format[i] == '\0')
+			format++;
+			if (*format == '\0')
 				return (-1);
-			if (format[i] == ' ')
+			if (*format == ' ')
 			{
 				_putchar('%');
 				_putchar(' ');
 				count += 2;
-				i++;
 				continue;
-			}
-			if (format[i] == 'b' || format[i] == 'S' ||
-					format[i] == 'r' || format[i] == 'R')
+			} else if (*format == 'b' || *format == 'S' ||
+					*format == 'r' || *format == 'R')
 			{
-				count += handle_custom_specifiers(&format[i], args);
-			}
-			else if (format[i] == 'o' || format[i] == 'p' ||
-					format[i] == 'x' || format[i] == 'X')
+				count += handle_custom_specifiers(format, args);
+			} else if (*format == 'o' || *format == 'p' ||
+					*format == 'x' || *format == 'X')
+
 			{
-				count += handle_specifiers_2(&format[i], args);
-			}
-			else
+				count += handle_specifiers_2(format, args);
+			} else
 			{
-				count += handle_specifiers(&format[i], args);
+				count += handle_specifiers(format, args);
 			}
-		}
-		else
+		} else
 		{
-			_putchar(format[i]);
+			_putchar(*format);
 			count++;
 		}
 	}
