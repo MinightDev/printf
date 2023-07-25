@@ -6,7 +6,7 @@ This is a custom implementation of the `printf` function in C, called `_printf`,
 
 - / **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
 
-- 3/ **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
+- / **handlers.c**: This file contains functions to handle different custom format specifiers such as `%b`, `%S`, `%r`, and `%R`.
 
 - 4/ **main.c**: The main file contains the `main` function, which is used for testing the custom `_printf` function with various format strings.
 
