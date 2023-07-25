@@ -147,6 +147,10 @@ int handle_formats(const char *format, va_list args)
 				return (-1);
 			if (format[i] == ' ')
 			{
+				putchar('%');
+				putchar(' ');
+				count += 2;
+				continue;
 				return (-1);
 			}
 			if (format[i] == 'b' || format[i] == 'S' ||
