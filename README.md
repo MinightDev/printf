@@ -24,7 +24,7 @@ The project adheres to the following requirements:
 
 - / **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
 
-- / **New Line**: All files end with a new line.
+- **New Line**: All files end with a new line.
 
 - **README.md**: A `README.md` file is included at the root of the project, providing information about the code and its usage.
 
