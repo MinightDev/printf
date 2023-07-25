@@ -2,7 +2,7 @@
 
 This is a custom implementation of the `printf` function in C, called `_printf`, which provides basic formatting capabilities. The project consists of several files:
 
-- 1/ **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
+- / **1-functions.c, 2-functions.c, 3-custom.c**: These files contain various functions used in the custom printf implementation, divided into multiple files for better organization.
 
 - 2/ **for_testing.txt**: This file is not used in the code and is likely provided as a placeholder for testing purposes.
 
