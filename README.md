@@ -22,7 +22,7 @@ The project adheres to the following requirements:
 
 - / **Compiler**: The code will be compiled on Ubuntu 20.04 LTS using gcc, with the options -Wall -Werror -Wextra -pedantic -std=gnu89.
 
-- 3/ **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
+- / **Coding Style**: The code follows the Betty style, which is a set of guidelines for writing clean and consistent code in C.
 
 - 4/ **New Line**: All files end with a new line.
 
