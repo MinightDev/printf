@@ -32,7 +32,7 @@ The project adheres to the following requirements:
 
 - / **Header Guards**: Header files have include guards to prevent multiple inclusion.
 
-- / **Global Variables**: The code does not use global variables.
+- **Global Variables**: The code does not use global variables.
 
 - **Function Limit**: Each file contains no more than 5 functions for better code organization.
 
